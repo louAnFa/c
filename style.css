@@ -20,7 +20,31 @@ h1 {
     color: #333;
 }
 
-.fragrance-container {
+/* Subtitle container styling */
+.subtitle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space between the title and subtitles */
+}
+
+.subtitle {
+    margin: 0 15px; /* Space between each subtitle */
+    font-size: 1.5em;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Fragrance and accessories sections styling */
+.section-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.fragrance-container, .accessory-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -39,7 +63,7 @@ li {
     padding: 8px;
     border-bottom: 1px solid #eee;
     position: relative;
-    transition: all 0.3s ease; /* Smooth transition for all properties */
+    transition: all 0.3s ease;
 }
 
 li:last-child {
@@ -49,31 +73,30 @@ li:last-child {
 /* Link styling */
 a {
     text-decoration: none;
-    color: inherit; /* Keeps the color consistent */
+    color: inherit;
 }
 
 /* Hover effects for fragrance list */
 li:hover {
-    font-size: 1.4em; /* Enlarge only the name */
-    color: #3498db; /* Change to a cool blue color */
-    text-decoration: none; /* Remove default underline */
+    font-size: 1.4em;
+    color: #3498db;
 }
 
 li:hover::after {
-    content: ''; /* Adds a pseudo element */
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #3498db; /* Same color as the hover */
+    background-color: #3498db;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.3s ease; /* Smooth underline animation */
+    transition: transform 0.3s ease;
 }
 
 li:hover::after {
-    transform: scaleX(1); /* Underline from left to right */
+    transform: scaleX(1);
     transform-origin: bottom left;
 }
 
@@ -83,13 +106,12 @@ li:hover::after {
     padding: 10px;
     border-left: 2px solid #eee;
     transition: all 0.3s ease;
-    width: 100%; /* Ensure text wraps across the entire box */
+    width: 100%;
 }
 
 .product-description {
     font-size: 1em;
     color: #555;
-    white-space: normal; /* Ensures wrapping */
 }
 
 .product-details {
@@ -106,5 +128,5 @@ li:hover::after {
 
 /* Hover effects for description box */
 .description-box:hover {
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    cursor: pointer;
 }
