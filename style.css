@@ -1,132 +1,117 @@
-/* Basic styling */
+/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Title */
 h1 {
     text-align: center;
     color: #333;
+    font-size: 2em;
 }
 
-/* Subtitle container styling */
+/* Subtitle container */
 .subtitle-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Space between the title and subtitles */
+    margin: 20px 0;
 }
 
 .subtitle {
-    margin: 0 15px; /* Space between each subtitle */
-    font-size: 1.5em;
-    color: #555;
-    text-align: center;
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #333;
     text-decoration: none;
-    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
 }
 
-/* Fragrance and accessories sections styling */
+.subtitle:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* Sections */
+.section {
+    margin-top: 40px;
+}
+
 .section-title {
     text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
-    color: #333;
+    font-size: 1.5em;
+    color: #444;
 }
 
-.fragrance-container, .accessory-container {
+/* Product Items */
+.item-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    width: 45%;
-}
-
-li {
-    font-size: 1.2em;
-    color: #555;
-    margin: 10px 0;
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-/* Link styling */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Hover effects for fragrance list */
-li:hover {
-    font-size: 1.4em;
-    color: #3498db;
-}
-
-li:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #3498db;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
-
-li:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Description box for product */
-.description-box {
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 20px;
     padding: 10px;
-    border-left: 2px solid #eee;
-    transition: all 0.3s ease;
-    width: 100%;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.02);
+}
+
+.product-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 1.2em;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-title:hover {
+    text-decoration: underline;
 }
 
 .product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.product-price {
     font-size: 1em;
-    color: #555;
+    color: #d35400;
+    font-weight: bold;
 }
 
-.product-details {
+.product-buy {
     font-size: 1em;
-    color: #888;
-    margin-top: 5px;
-}
-
-.price {
-    font-size: 1.2em;
-    color: #e74c3c;
-    display: none;
-}
-
-/* Hover effects for description box */
-.description-box:hover {
-    cursor: pointer;
+    color: #2c3e50;
 }
